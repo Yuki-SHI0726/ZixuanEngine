@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Source\Utils\Log\Logger.cpp" />
+    <ClCompile Include="Source\Utils\Timing\HighPrecisionTimer.cpp" />
+    <ClCompile Include="Source\Utils\Math\Matrix.cpp" />
+    <ClCompile Include="Source\Utils\Color.cpp" />
+    <ClCompile Include="Source\Utils\RNG.cpp" />
+    <ClCompile Include="Source\Application\Application.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Utils\Log\Logger.h" />
+    <ClInclude Include="Source\Utils\Timing\HighPrecisionTimer.h" />
+    <ClInclude Include="Source\Utils\Timing\SimpleInstrumentationProfiler.h" />
+    <ClInclude Include="Source\Utils\Math\Circle.h" />
+    <ClInclude Include="Source\Utils\Math\Cone.h" />
+    <ClInclude Include="Source\Utils\Math\Math.h" />
+    <ClInclude Include="Source\Utils\Math\Matrix.h" />
+    <ClInclude Include="Source\Utils\Math\Rectangle.h" />
+    <ClInclude Include="Source\Utils\Math\Sphere.h" />
+    <ClInclude Include="Source\Utils\Math\Triangle.h" />
+    <ClInclude Include="Source\Utils\Math\Vector2.h" />
+    <ClInclude Include="Source\Utils\Math\Vector3.h" />
+    <ClInclude Include="Source\Utils\Color.h" />
+    <ClInclude Include="Source\Utils\RNG.h" />
+    <ClInclude Include="Source\Utils\Typedefs.h" />
+    <ClInclude Include="Source\Application\Application.h" />
+    <ClInclude Include="Source\Core\Core.h" />
+    <ClInclude Include="Source\Core\CoreMinimal.h" />
+    <ClInclude Include="Source\Core\EntryPoint.h" />
+  </ItemGroup>
+</Project>
