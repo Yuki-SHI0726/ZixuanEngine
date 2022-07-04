@@ -1,32 +1,102 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="Source\Utils\Log\Logger.cpp" />
-    <ClCompile Include="Source\Utils\Timing\HighPrecisionTimer.cpp" />
-    <ClCompile Include="Source\Utils\Math\Matrix.cpp" />
-    <ClCompile Include="Source\Utils\Color.cpp" />
-    <ClCompile Include="Source\Utils\RNG.cpp" />
-    <ClCompile Include="Source\Application\Application.cpp" />
+    <Filter Include="Application">
+      <UniqueIdentifier>{D9DE78AF-4594-F1A4-CE88-EB7B3A3DE8A8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{2EB4837C-1AEB-840D-C3D7-6A10AFED000F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{F68B420E-62A0-6ABF-2B22-0E1F97F566F0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Log">
+      <UniqueIdentifier>{C7AE0E44-3319-C3BA-7C57-7460E800A10F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Math">
+      <UniqueIdentifier>{8FDAE4C5-7B92-2613-E499-FF6ED070C103}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Timing">
+      <UniqueIdentifier>{EDD666E3-D939-F687-82BF-2E3E6E01C20A}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Utils\Log\Logger.h" />
-    <ClInclude Include="Source\Utils\Timing\HighPrecisionTimer.h" />
-    <ClInclude Include="Source\Utils\Timing\SimpleInstrumentationProfiler.h" />
-    <ClInclude Include="Source\Utils\Math\Circle.h" />
-    <ClInclude Include="Source\Utils\Math\Cone.h" />
-    <ClInclude Include="Source\Utils\Math\Math.h" />
-    <ClInclude Include="Source\Utils\Math\Matrix.h" />
-    <ClInclude Include="Source\Utils\Math\Rectangle.h" />
-    <ClInclude Include="Source\Utils\Math\Sphere.h" />
-    <ClInclude Include="Source\Utils\Math\Triangle.h" />
-    <ClInclude Include="Source\Utils\Math\Vector2.h" />
-    <ClInclude Include="Source\Utils\Math\Vector3.h" />
-    <ClInclude Include="Source\Utils\Color.h" />
-    <ClInclude Include="Source\Utils\RNG.h" />
-    <ClInclude Include="Source\Utils\Typedefs.h" />
-    <ClInclude Include="Source\Application\Application.h" />
-    <ClInclude Include="Source\Core\Core.h" />
-    <ClInclude Include="Source\Core\CoreMinimal.h" />
-    <ClInclude Include="Source\Core\EntryPoint.h" />
+    <ClInclude Include="Source\Application\Application.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Core\Core.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Core\CoreMinimal.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Core\EntryPoint.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Color.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Log\Logger.h">
+      <Filter>Utils\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Math\Circle.h">
+      <Filter>Utils\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Math\Cone.h">
+      <Filter>Utils\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Math\Math.h">
+      <Filter>Utils\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Math\Matrix.h">
+      <Filter>Utils\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Math\Rectangle.h">
+      <Filter>Utils\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Math\Sphere.h">
+      <Filter>Utils\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Math\Triangle.h">
+      <Filter>Utils\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Math\Vector2.h">
+      <Filter>Utils\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Math\Vector3.h">
+      <Filter>Utils\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\RNG.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Timing\HighPrecisionTimer.h">
+      <Filter>Utils\Timing</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Timing\SimpleInstrumentationProfiler.h">
+      <Filter>Utils\Timing</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utils\Typedefs.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Application\Application.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Utils\Color.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Utils\Log\Logger.cpp">
+      <Filter>Utils\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Utils\Math\Matrix.cpp">
+      <Filter>Utils\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Utils\RNG.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Utils\Timing\HighPrecisionTimer.cpp">
+      <Filter>Utils\Timing</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

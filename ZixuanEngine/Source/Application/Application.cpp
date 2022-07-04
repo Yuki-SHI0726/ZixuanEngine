@@ -3,5 +3,5 @@
 
 void ZE::Application::Run()
 {
-	ZE::Logger::Get().Print("Hello World");
+	ZE::Logger::Get().Print("Zixuan Engine");
 }

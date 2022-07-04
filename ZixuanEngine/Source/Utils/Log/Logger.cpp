@@ -32,7 +32,7 @@ void Logger::LogInfo(const std::string& category, int line, const char* file, co
 	time_t clock = time(nullptr);
 	std::tm now;
 	localtime_s(&now, &clock);	// Converts given time since epoch
-	std::string time = std::to_string(now.tm_hour) + ":" + std::to_string(now.tm_min) + ((now.tm_hour >= 12) ? " PM" : " AM");
+	const std::string time = std::to_string(now.tm_hour) + ":" + std::to_string(now.tm_min) + ((now.tm_hour >= 12) ? " PM" : " AM");
 
 	// Log the message
 	SetColor(m_category[category]);
@@ -43,7 +43,7 @@ Logger::Logger()
 	: m_consoleHandle{ GetStdHandle(STD_OUTPUT_HANDLE) }
 	, m_currentColor{ Color::kLightGray }
 {
-	m_category.insert({ "Info", Color::kWhite });
+	m_category.insert({ "Info", Color::kLightGray });
 	m_category.insert({ "Error", Color::kRed });
 	m_category.insert({ "Warning", Color::kYellow });
 	m_category.insert({ "Prompt", Color::kCyan });
