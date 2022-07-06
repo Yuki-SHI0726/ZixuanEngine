@@ -1,7 +1,25 @@
 #include "Application.h"
+#include "Events/ApplicationEvent.h"
+#include "Events/KeyEvent.h"
 #include "Utils/Log/Logger.h"
 
-void ZE::Application::Run()
+namespace ZE
 {
-	ZE::Logger::Get().Print("Zixuan Engine");
+void Application::Run()
+{
+	Logger::Get().Print("Zixuan Engine Yes");
+
+	WindowResizeEvent e(1280, 720);
+	KeyPressedEvent e2(1, 1);
+	if (e.IsInCategory(EventCategory::Application))
+	{
+		Logger::Get().Print(e.ToString());
+
+	}
+	else
+	{
+
+	}
+		Logger::Get().Print(e2.ToString());
+}
 }

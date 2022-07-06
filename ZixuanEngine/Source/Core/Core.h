@@ -9,3 +9,5 @@
 #else
 	#error ZixuanEngine only supports Windows
 #endif
+
+#define BIT(value) (1 << value)

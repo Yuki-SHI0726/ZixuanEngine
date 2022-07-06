@@ -4,6 +4,9 @@
     <Filter Include="Application">
       <UniqueIdentifier>{D9DE78AF-4594-F1A4-CE88-EB7B3A3DE8A8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Application\Events">
+      <UniqueIdentifier>{9D3C56BE-8920-1714-F280-1167DE830196}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Core">
       <UniqueIdentifier>{2EB4837C-1AEB-840D-C3D7-6A10AFED000F}</UniqueIdentifier>
     </Filter>
@@ -78,6 +81,11 @@
     <ClInclude Include="Source\Utils\Typedefs.h">
       <Filter>Utils</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Application\Events\Event.h" />
+    <ClInclude Include="Source\Application\Events\KeyEvent.h" />
+    <ClInclude Include="Source\Application\Events\ApplicationEvent.h" />
+    <ClInclude Include="Source\Application\Events\MouseEvent.h" />
+    <ClInclude Include="Source\Application\Events\EventDispatcher.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Application\Application.cpp">
@@ -98,5 +106,9 @@
     <ClCompile Include="Source\Utils\Timing\HighPrecisionTimer.cpp">
       <Filter>Utils\Timing</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Application\Events\KeyEvent.cpp" />
+    <ClCompile Include="Source\Application\Events\ApplicationEvent.cpp" />
+    <ClCompile Include="Source\Application\Events\MouseEvent.cpp" />
+    <ClCompile Include="Source\Application\Events\EventDispatcher.cpp" />
   </ItemGroup>
 </Project>

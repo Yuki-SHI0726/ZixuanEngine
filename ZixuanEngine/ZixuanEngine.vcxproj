@@ -143,7 +143,12 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Application\Events\EventDispatcher.h" />
+    <ClInclude Include="Source\Application\Events\MouseEvent.h" />
     <ClInclude Include="Source\Application\Application.h" />
+    <ClInclude Include="Source\Application\Events\ApplicationEvent.h" />
+    <ClInclude Include="Source\Application\Events\Event.h" />
+    <ClInclude Include="Source\Application\Events\KeyEvent.h" />
     <ClInclude Include="Source\Core\Core.h" />
     <ClInclude Include="Source\Core\CoreMinimal.h" />
     <ClInclude Include="Source\Core\EntryPoint.h" />
@@ -164,7 +169,11 @@
     <ClInclude Include="Source\Utils\Typedefs.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Application\Events\EventDispatcher.cpp" />
+    <ClCompile Include="Source\Application\Events\MouseEvent.cpp" />
     <ClCompile Include="Source\Application\Application.cpp" />
+    <ClCompile Include="Source\Application\Events\ApplicationEvent.cpp" />
+    <ClCompile Include="Source\Application\Events\KeyEvent.cpp" />
     <ClCompile Include="Source\Utils\Color.cpp" />
     <ClCompile Include="Source\Utils\Log\Logger.cpp" />
     <ClCompile Include="Source\Utils\Math\Matrix.cpp" />
