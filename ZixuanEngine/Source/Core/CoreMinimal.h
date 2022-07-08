@@ -1,9 +1,5 @@
 #pragma once
 
-#include "Application/Application.h"
-
-// Entry point
-#include "Core/EntryPoint.h"
-
-// Type definitions/Alias
+#include "Core.h"
 #include "Utils/Typedefs.h"
+

@@ -4,24 +4,25 @@
 
 namespace ZE
 {
+/** Event when a window got resized */
 class ZE_API WindowResizeEvent : public Event
 {
 public: 
 	WindowResizeEvent(uint32 width, uint32 height);
 
-	uint32 GetWidth() const { return m_width; }
-	uint32 GetHeight() const { return m_height; }
-
-	virtual std::string ToString() const override final;
-
 	EVENT_CLASS_TYPE(WindowResize)
 	EVENT_CLASS_CATEGORY(static_cast<uint32>(EventCategory::Application))
+
+	uint32 GetWidth() const { return m_width; }
+	uint32 GetHeight() const { return m_height; }
+	virtual std::string ToString() const override final;
 
 private:
 	uint32 m_width = 0;
 	uint32 m_height = 0;
 };
 
+/** Event when a window got closed */
 class ZE_API WindowCloseEvent : public Event
 {
 public:
@@ -31,6 +32,7 @@ public:
 	EVENT_CLASS_CATEGORY(static_cast<uint32>(EventCategory::Application))
 };
 
+/** Event when application ticks */
 class ZE_API AppTickEvent : public Event
 {
 public:
@@ -40,6 +42,7 @@ public:
 	EVENT_CLASS_CATEGORY(static_cast<uint32>(EventCategory::Application))
 };
 
+/** Event when application updates */
 class ZE_API AppUpdateEvent : public Event
 {
 public:
@@ -49,6 +52,7 @@ public:
 	EVENT_CLASS_CATEGORY(static_cast<uint32>(EventCategory::Application))
 };
 
+/** Event when application renders */
 class ZE_API AppRenderEvent : public Event
 {
 public:

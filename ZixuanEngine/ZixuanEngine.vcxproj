@@ -76,10 +76,11 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>zepch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>ZE_PLATFORM_WINDOWS;ZE_BUILD_DLL;ZE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Source;Source\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -96,10 +97,11 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>zepch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>ZE_PLATFORM_WINDOWS;ZE_BUILD_DLL;ZE_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Source;Source\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -120,10 +122,11 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>zepch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>ZE_PLATFORM_WINDOWS;ZE_BUILD_DLL;ZE_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Source;Source\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -143,15 +146,15 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Application\Events\EventDispatcher.h" />
-    <ClInclude Include="Source\Application\Events\MouseEvent.h" />
     <ClInclude Include="Source\Application\Application.h" />
     <ClInclude Include="Source\Application\Events\ApplicationEvent.h" />
     <ClInclude Include="Source\Application\Events\Event.h" />
+    <ClInclude Include="Source\Application\Events\EventDispatcher.h" />
     <ClInclude Include="Source\Application\Events\KeyEvent.h" />
+    <ClInclude Include="Source\Application\Events\MouseEvent.h" />
     <ClInclude Include="Source\Core\Core.h" />
     <ClInclude Include="Source\Core\CoreMinimal.h" />
-    <ClInclude Include="Source\Core\EntryPoint.h" />
+    <ClInclude Include="Source\Core\zepch.h" />
     <ClInclude Include="Source\Utils\Color.h" />
     <ClInclude Include="Source\Utils\Log\Logger.h" />
     <ClInclude Include="Source\Utils\Math\Circle.h" />
@@ -169,11 +172,15 @@
     <ClInclude Include="Source\Utils\Typedefs.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\Application\Events\EventDispatcher.cpp" />
-    <ClCompile Include="Source\Application\Events\MouseEvent.cpp" />
     <ClCompile Include="Source\Application\Application.cpp" />
     <ClCompile Include="Source\Application\Events\ApplicationEvent.cpp" />
+    <ClCompile Include="Source\Application\Events\EventDispatcher.cpp" />
     <ClCompile Include="Source\Application\Events\KeyEvent.cpp" />
+    <ClCompile Include="Source\Application\Events\MouseEvent.cpp" />
+    <ClCompile Include="Source\Core\CoreMinimal.cpp" />
+    <ClCompile Include="Source\Core\zepch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="Source\Utils\Color.cpp" />
     <ClCompile Include="Source\Utils\Log\Logger.cpp" />
     <ClCompile Include="Source\Utils\Math\Matrix.cpp" />

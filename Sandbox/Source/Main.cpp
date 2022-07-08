@@ -1,4 +1,5 @@
 #include "CoreMinimal.h"
+#include "Application/Application.h"
 
 class Sandbox : public ZE::Application
 {
@@ -14,9 +15,9 @@ ZE::Application* ZE::CreateApplication()
 
 int main(int argc, char** argv[])
 {
-	ZE::Application* app = ZE::CreateApplication();
-	app->Run();
-	delete app;
+	ZE::Application* pApp = ZE::CreateApplication();
+	pApp->Run();
+	ZE_DELETE(pApp);
 	return 0;
 }
 

@@ -11,3 +11,13 @@
 #endif
 
 #define BIT(value) (1 << value)
+
+#define ZE_DELETE(ptr)\
+	delete ptr;\
+	ptr = nullptr;
+
+#define ZE_SAFE_DELETE(ptr) \
+	if (ptr)\
+	{\
+		ZE_DELETE(ptr);\
+	}

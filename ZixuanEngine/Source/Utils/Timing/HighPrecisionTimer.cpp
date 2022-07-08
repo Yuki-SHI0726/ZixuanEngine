@@ -1,4 +1,4 @@
-// HighPrecisionTimer.cpp
+#include "zepch.h"
 #include "HighPrecisionTimer.h"
 
 using namespace std::chrono;

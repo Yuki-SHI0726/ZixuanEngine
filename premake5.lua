@@ -18,6 +18,9 @@ project "ZixuanEngine"
     targetdir ("Builds/" .. outputdir .. "/%{prj.name}")
     objdir ("Builds/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "zepch.h"
+    pchsource "ZixuanEngine/Source/Core/zepch.cpp"
+
     files
     {
         "%{prj.name}/Source/**.h",
@@ -26,7 +29,8 @@ project "ZixuanEngine"
 
     includedirs
     {
-        "ZixuanEngine/Source"
+        "ZixuanEngine/Source",
+        "ZixuanEngine/Source/Core",
     }
 
     filter "system:windows"
@@ -73,8 +77,8 @@ project "Sandbox"
 
     includedirs
     {
+        "ZixuanEngine/Source",
         "ZixuanEngine/Source/Core",
-        "ZixuanEngine/Source"
     }
 
     links

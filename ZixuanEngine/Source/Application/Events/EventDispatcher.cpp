@@ -1,3 +1,5 @@
+#include "zepch.h"
+
 #include "EventDispatcher.h"
 
 namespace ZE

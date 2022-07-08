@@ -3,6 +3,7 @@
 
 namespace ZE
 {
+/** Event for keyboard keys */
 class ZE_API KeyEvent : public Event
 {
 public:
@@ -16,27 +17,29 @@ protected:
 	KeyCode m_keyCode = 0;
 };
 
+/** Event for keyboard key pressed */
 class ZE_API KeyPressedEvent : public KeyEvent
 {
 public:
 	KeyPressedEvent(KeyCode keyCode, uint32 repeatCount);
 
+	EVENT_CLASS_TYPE(KeyPressed);
+
 	uint32 GetRepeatCount() const { return m_repeatCount; }
 	virtual std::string ToString() const override final;
-
-	EVENT_CLASS_TYPE(KeyPressed);
 
 private:
 	uint32 m_repeatCount = 0;
 };
 
+/** Event for keyboard key released */
 class ZE_API KeyReleasedEvent : public KeyEvent
 {
 public:
 	KeyReleasedEvent(KeyCode keyCode);
 
-	virtual std::string ToString() const override final;
-
 	EVENT_CLASS_TYPE(KeyReleased);
+
+	virtual std::string ToString() const override final;
 };
 }

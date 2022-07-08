@@ -1,3 +1,4 @@
+#include "zepch.h"
 #include "Color.h"
 
 ZE::Color::Color(uint8 inR, uint8 inG, uint8 inB, uint8 inA)

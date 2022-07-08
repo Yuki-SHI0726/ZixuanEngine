@@ -1,3 +1,4 @@
+#include "zepch.h"
 #include "Logger.h"
 
 namespace ZE
