@@ -34,3 +34,5 @@
 		ZE_DELETE(ptr);\
 	}
 
+#define BIND_EVENT_FUNCTION(func)\
+	std::bind(&func, this, std::placeholders::_1)

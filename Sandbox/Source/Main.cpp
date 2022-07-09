@@ -15,7 +15,10 @@ ZE::Application* ZE::CreateApplication()
 int main(int argc, char** argv[])
 {
 	ZE::Application* pApp = ZE::CreateApplication();
-	pApp->Run();
+	if (pApp->Init())
+	{
+		pApp->Run();
+	}
 	ZE_DELETE(pApp);
 	return 0;
 }

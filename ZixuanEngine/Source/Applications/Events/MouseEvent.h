@@ -35,8 +35,8 @@ public:
 	virtual std::string ToString() const override final;
 
 private:
-	f32 m_xOffset = 0.0f;
-	f32 m_yOffset = 0.0f;
+	f32 m_xOffset = 0;
+	f32 m_yOffset = 0;
 };
 
 /** Event when mouse button triggered */

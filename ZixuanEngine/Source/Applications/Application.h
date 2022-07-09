@@ -2,17 +2,22 @@
 
 #include "Core/Core.h"
 #include "Windows/Window.h"
+#include "Events/ApplicationEvent.h"
 
 namespace ZE
 {
 class ZE_API Application
 {
 public:
-	Application();
 	virtual ~Application() = default;
 
 	bool Init();
 	void Run();
+
+	void OnEvent(Event& e);
+
+private:
+	bool OnWindowClose(WindowCloseEvent& windowCloseEvent);
 
 private:
 	std::unique_ptr<Window> m_pWindow;

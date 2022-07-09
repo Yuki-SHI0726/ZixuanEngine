@@ -33,6 +33,8 @@ private:
 	virtual void Init(const WindowProps& props);
 	virtual void Shutdown();
 
+	void SetEventCallbacks();
+
 private:
 	GLFWwindow* m_pWindow = nullptr;
 	WindowData m_data;
