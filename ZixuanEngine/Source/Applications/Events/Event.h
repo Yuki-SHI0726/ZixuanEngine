@@ -1,7 +1,6 @@
 #pragma once
-
-#include "Core/Core.h"
-#include "Core/CoreMinimal.h"
+#include "Utils/Typedefs.h"
+#include <zepch.h>
 
 namespace ZE
 {

@@ -4,7 +4,7 @@
 #include <string>
 #include <unordered_map>
 
-#define ZE_LOG(category, format, ...) { Logger::Get().LogInfo(category, __LINE__, __FILE__, format, __VA_ARGS__); } 
+#define ZE_LOG(category, format, ...) { Logger::Get().LogInfo(#category, __LINE__, __FILE__, format, __VA_ARGS__); } 
 
 namespace ZE
 {

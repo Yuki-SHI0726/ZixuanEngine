@@ -24,28 +24,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Application\Application.h">
+    <ClInclude Include="Source\Applications\Application.h">
       <Filter>Application</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Application\Events\ApplicationEvent.h">
+    <ClInclude Include="Source\Applications\Events\ApplicationEvent.h">
       <Filter>Application\Events</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Application\Events\Event.h">
+    <ClInclude Include="Source\Applications\Events\Event.h">
       <Filter>Application\Events</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Application\Events\EventDispatcher.h">
+    <ClInclude Include="Source\Applications\Events\EventDispatcher.h">
       <Filter>Application\Events</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Application\Events\KeyEvent.h">
+    <ClInclude Include="Source\Applications\Events\KeyEvent.h">
       <Filter>Application\Events</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Application\Events\MouseEvent.h">
+    <ClInclude Include="Source\Applications\Events\MouseEvent.h">
       <Filter>Application\Events</Filter>
     </ClInclude>
     <ClInclude Include="Source\Core\Core.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Core\CoreMinimal.h">
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="Source\Core\zepch.h">
@@ -96,25 +93,24 @@
     <ClInclude Include="Source\Utils\Typedefs.h">
       <Filter>Utils</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Applications\Windows\Window.h" />
+    <ClInclude Include="Source\Applications\Platforms\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\Application\Application.cpp">
+    <ClCompile Include="Source\Applications\Application.cpp">
       <Filter>Application</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Application\Events\ApplicationEvent.cpp">
+    <ClCompile Include="Source\Applications\Events\ApplicationEvent.cpp">
       <Filter>Application\Events</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Application\Events\EventDispatcher.cpp">
+    <ClCompile Include="Source\Applications\Events\EventDispatcher.cpp">
       <Filter>Application\Events</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Application\Events\KeyEvent.cpp">
+    <ClCompile Include="Source\Applications\Events\KeyEvent.cpp">
       <Filter>Application\Events</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Application\Events\MouseEvent.cpp">
+    <ClCompile Include="Source\Applications\Events\MouseEvent.cpp">
       <Filter>Application\Events</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Core\CoreMinimal.cpp">
-      <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="Source\Core\zepch.cpp">
       <Filter>Core</Filter>
@@ -134,5 +130,7 @@
     <ClCompile Include="Source\Utils\Timing\HighPrecisionTimer.cpp">
       <Filter>Utils\Timing</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Applications\Windows\Window.cpp" />
+    <ClCompile Include="Source\Applications\Platforms\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

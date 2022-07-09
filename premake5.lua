@@ -10,6 +10,11 @@ workspace "ZixuanEngine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Toolset/GLFW/include"
+
+include "Toolset/GLFW"
+
 project "ZixuanEngine"
     location "ZixuanEngine"
     kind "SharedLib"
@@ -31,6 +36,13 @@ project "ZixuanEngine"
     {
         "ZixuanEngine/Source",
         "ZixuanEngine/Source/Core",
+        "%{IncludeDir.GLFW}",
+    }
+
+    links
+    {
+        "GLFW",
+        "opengl32.lib",
     }
 
     filter "system:windows"
@@ -98,6 +110,7 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "ZE_DEBUG"
+        defines "ZE_ENABLE_ASSERTS"
         symbols "On"
 
     filter "configurations:Release"

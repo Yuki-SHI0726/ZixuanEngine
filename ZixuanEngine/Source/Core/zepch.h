@@ -1,8 +1,13 @@
 #pragma once
 
+#include "Core.h"
+#include "Utils/Typedefs.h"
+#include "Utils/Log/Logger.h"
+
+#include <assert.h>
+#include <algorithm>
 #include <memory>
 #include <utility>
-#include <algorithm>
 #include <functional>
 #include <sstream>
 #include <iostream>

@@ -1,5 +1,4 @@
-#include "CoreMinimal.h"
-#include "Application/Application.h"
+#include "Applications/Application.h"
 
 class Sandbox : public ZE::Application
 {

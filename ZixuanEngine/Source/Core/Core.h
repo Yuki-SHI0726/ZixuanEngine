@@ -12,6 +12,18 @@
 
 #define BIT(value) (1 << value)
 
+
+#ifdef ZE_ENABLE_ASSERTS
+	#define ZE_ASSERT(succeeded, ...) \
+		if (!(succeeded))\
+		{\
+			ZE_LOG(Error, __VA_ARGS__);\
+		}\
+		assert((succeeded));
+#else
+	#define ZE_ASSERT(succeeded, ...)
+#endif
+
 #define ZE_DELETE(ptr)\
 	delete ptr;\
 	ptr = nullptr;
@@ -21,3 +33,4 @@
 	{\
 		ZE_DELETE(ptr);\
 	}
+
