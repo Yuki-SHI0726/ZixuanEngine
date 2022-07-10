@@ -1,12 +1,12 @@
 #pragma once
-#include "Typedefs.h"
+#include "Utils/Typedefs.h"
 
 namespace ZE
 {
 /**
- * Describes a color in four RGBA unsigned 8 bits integers
+ * Describes a color in four RGBA unsigned 8 bits integers from [0 - 255]
  */
-class Color
+class ZE_API Color
 {
 public:
     uint8 r = 0; 

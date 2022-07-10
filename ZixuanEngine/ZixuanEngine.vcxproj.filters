@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Application">
-      <UniqueIdentifier>{D9DE78AF-4594-F1A4-CE88-EB7B3A3DE8A8}</UniqueIdentifier>
+    <Filter Include="Applications">
+      <UniqueIdentifier>{6CBA949E-581D-2443-01A3-5CF9EDE4EFC5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Application\Events">
-      <UniqueIdentifier>{9D3C56BE-8920-1714-F280-1167DE830196}</UniqueIdentifier>
+    <Filter Include="Applications\Events">
+      <UniqueIdentifier>{D0F4FA3B-3C56-D849-C5C3-1EFC31240F09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Applications\Layers">
+      <UniqueIdentifier>{ABDFDD4A-1741-BB58-A0AE-010B0C0FF217}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Applications\Platforms">
+      <UniqueIdentifier>{B378D797-9F72-00EA-88DF-96FA74786656}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Applications\Platforms\Windows">
+      <UniqueIdentifier>{ED25E0CC-D94B-AA33-C291-2FFFAE56CFFF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Applications\Windows">
+      <UniqueIdentifier>{A6103C07-929F-C5D0-3BBE-D9CB272CD676}</UniqueIdentifier>
     </Filter>
     <Filter Include="Core">
       <UniqueIdentifier>{2EB4837C-1AEB-840D-C3D7-6A10AFED000F}</UniqueIdentifier>
     </Filter>
     <Filter Include="Utils">
       <UniqueIdentifier>{F68B420E-62A0-6ABF-2B22-0E1F97F566F0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\Colors">
+      <UniqueIdentifier>{F7442BBC-E3A7-BA60-8C2D-F316786F86E3}</UniqueIdentifier>
     </Filter>
     <Filter Include="Utils\Log">
       <UniqueIdentifier>{C7AE0E44-3319-C3BA-7C57-7460E800A10F}</UniqueIdentifier>
@@ -25,22 +40,34 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Applications\Application.h">
-      <Filter>Application</Filter>
+      <Filter>Applications</Filter>
     </ClInclude>
     <ClInclude Include="Source\Applications\Events\ApplicationEvent.h">
-      <Filter>Application\Events</Filter>
+      <Filter>Applications\Events</Filter>
     </ClInclude>
     <ClInclude Include="Source\Applications\Events\Event.h">
-      <Filter>Application\Events</Filter>
+      <Filter>Applications\Events</Filter>
     </ClInclude>
     <ClInclude Include="Source\Applications\Events\EventDispatcher.h">
-      <Filter>Application\Events</Filter>
+      <Filter>Applications\Events</Filter>
     </ClInclude>
     <ClInclude Include="Source\Applications\Events\KeyEvent.h">
-      <Filter>Application\Events</Filter>
+      <Filter>Applications\Events</Filter>
     </ClInclude>
     <ClInclude Include="Source\Applications\Events\MouseEvent.h">
-      <Filter>Application\Events</Filter>
+      <Filter>Applications\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Applications\Layers\Layer.h">
+      <Filter>Applications\Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Applications\Layers\LayerStack.h">
+      <Filter>Applications\Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Applications\Platforms\Windows\WindowsWindow.h">
+      <Filter>Applications\Platforms\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Applications\Windows\Window.h">
+      <Filter>Applications\Windows</Filter>
     </ClInclude>
     <ClInclude Include="Source\Core\Core.h">
       <Filter>Core</Filter>
@@ -48,8 +75,8 @@
     <ClInclude Include="Source\Core\zepch.h">
       <Filter>Core</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Utils\Color.h">
-      <Filter>Utils</Filter>
+    <ClInclude Include="Source\Utils\Colors\Color.h">
+      <Filter>Utils\Colors</Filter>
     </ClInclude>
     <ClInclude Include="Source\Utils\Log\Logger.h">
       <Filter>Utils\Log</Filter>
@@ -93,30 +120,40 @@
     <ClInclude Include="Source\Utils\Typedefs.h">
       <Filter>Utils</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Applications\Windows\Window.h" />
-    <ClInclude Include="Source\Applications\Platforms\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Applications\Application.cpp">
-      <Filter>Application</Filter>
+      <Filter>Applications</Filter>
     </ClCompile>
     <ClCompile Include="Source\Applications\Events\ApplicationEvent.cpp">
-      <Filter>Application\Events</Filter>
+      <Filter>Applications\Events</Filter>
     </ClCompile>
     <ClCompile Include="Source\Applications\Events\EventDispatcher.cpp">
-      <Filter>Application\Events</Filter>
+      <Filter>Applications\Events</Filter>
     </ClCompile>
     <ClCompile Include="Source\Applications\Events\KeyEvent.cpp">
-      <Filter>Application\Events</Filter>
+      <Filter>Applications\Events</Filter>
     </ClCompile>
     <ClCompile Include="Source\Applications\Events\MouseEvent.cpp">
-      <Filter>Application\Events</Filter>
+      <Filter>Applications\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Applications\Layers\Layer.cpp">
+      <Filter>Applications\Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Applications\Layers\LayerStack.cpp">
+      <Filter>Applications\Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Applications\Platforms\Windows\WindowsWindow.cpp">
+      <Filter>Applications\Platforms\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Applications\Windows\Window.cpp">
+      <Filter>Applications\Windows</Filter>
     </ClCompile>
     <ClCompile Include="Source\Core\zepch.cpp">
       <Filter>Core</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Utils\Color.cpp">
-      <Filter>Utils</Filter>
+    <ClCompile Include="Source\Utils\Colors\Color.cpp">
+      <Filter>Utils\Colors</Filter>
     </ClCompile>
     <ClCompile Include="Source\Utils\Log\Logger.cpp">
       <Filter>Utils\Log</Filter>
@@ -130,7 +167,5 @@
     <ClCompile Include="Source\Utils\Timing\HighPrecisionTimer.cpp">
       <Filter>Utils\Timing</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Applications\Windows\Window.cpp" />
-    <ClCompile Include="Source\Applications\Platforms\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

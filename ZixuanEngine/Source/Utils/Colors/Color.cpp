@@ -10,13 +10,21 @@ ZE::Color::Color(uint8 inR, uint8 inG, uint8 inB, uint8 inA)
 }
 
 ZE::Color::Color(uint32 color)
+    : r((color >> 24) & 0xFF)
+    , g((color >> 16) & 0xFF)
+    , b((color >> 8) & 0xFF)
+    , a(color & 0xFF)
 {
-    //TODO
 }
 
 uint32 ZE::Color::GetColor() const
 {
-    //TODO
-    uint32 value = 0x00;
+    uint32 value = 0x00000000;
+
+    value |= (r << 24);
+    value |= (g << 16);
+    value |= (b << 8);
+    value |= a;
+
     return value;
 }

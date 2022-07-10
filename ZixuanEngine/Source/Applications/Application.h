@@ -3,6 +3,7 @@
 #include "Core/Core.h"
 #include "Windows/Window.h"
 #include "Events/ApplicationEvent.h"
+#include "Layers/LayerStack.h"
 
 namespace ZE
 {
@@ -13,14 +14,19 @@ public:
 
 	bool Init();
 	void Run();
+	void Shutdown();
 
 	void OnEvent(Event& e);
+
+	void PushLayer(Layer* pLayer) { m_layerStack.PushLayer(pLayer); }
+	void PushOverlay(Layer* pOverlay) { m_layerStack.PushOverlay(pOverlay); }
 
 private:
 	bool OnWindowClose(WindowCloseEvent& windowCloseEvent);
 
 private:
-	std::unique_ptr<Window> m_pWindow;
+	LayerStack m_layerStack;
+	Window* m_pWindow = nullptr;
 	bool m_isRunning = true;
 };
 

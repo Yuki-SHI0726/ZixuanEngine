@@ -84,6 +84,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -109,6 +110,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -135,6 +137,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -155,9 +158,13 @@
     <ClInclude Include="Source\Applications\Events\EventDispatcher.h" />
     <ClInclude Include="Source\Applications\Events\KeyEvent.h" />
     <ClInclude Include="Source\Applications\Events\MouseEvent.h" />
+    <ClInclude Include="Source\Applications\Layers\Layer.h" />
+    <ClInclude Include="Source\Applications\Layers\LayerStack.h" />
+    <ClInclude Include="Source\Applications\Platforms\Windows\WindowsWindow.h" />
+    <ClInclude Include="Source\Applications\Windows\Window.h" />
     <ClInclude Include="Source\Core\Core.h" />
     <ClInclude Include="Source\Core\zepch.h" />
-    <ClInclude Include="Source\Utils\Color.h" />
+    <ClInclude Include="Source\Utils\Colors\Color.h" />
     <ClInclude Include="Source\Utils\Log\Logger.h" />
     <ClInclude Include="Source\Utils\Math\Circle.h" />
     <ClInclude Include="Source\Utils\Math\Cone.h" />
@@ -172,8 +179,6 @@
     <ClInclude Include="Source\Utils\Timing\HighPrecisionTimer.h" />
     <ClInclude Include="Source\Utils\Timing\SimpleInstrumentationProfiler.h" />
     <ClInclude Include="Source\Utils\Typedefs.h" />
-    <ClInclude Include="Source\Applications\Windows\Window.h" />
-    <ClInclude Include="Source\Applications\Platforms\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Applications\Application.cpp" />
@@ -181,16 +186,18 @@
     <ClCompile Include="Source\Applications\Events\EventDispatcher.cpp" />
     <ClCompile Include="Source\Applications\Events\KeyEvent.cpp" />
     <ClCompile Include="Source\Applications\Events\MouseEvent.cpp" />
+    <ClCompile Include="Source\Applications\Layers\Layer.cpp" />
+    <ClCompile Include="Source\Applications\Layers\LayerStack.cpp" />
+    <ClCompile Include="Source\Applications\Platforms\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="Source\Applications\Windows\Window.cpp" />
     <ClCompile Include="Source\Core\zepch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Source\Utils\Color.cpp" />
+    <ClCompile Include="Source\Utils\Colors\Color.cpp" />
     <ClCompile Include="Source\Utils\Log\Logger.cpp" />
     <ClCompile Include="Source\Utils\Math\Matrix.cpp" />
     <ClCompile Include="Source\Utils\RNG.cpp" />
     <ClCompile Include="Source\Utils\Timing\HighPrecisionTimer.cpp" />
-    <ClCompile Include="Source\Applications\Windows\Window.cpp" />
-    <ClCompile Include="Source\Applications\Platforms\Windows\WindowsWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Toolset\GLFW\GLFW.vcxproj">

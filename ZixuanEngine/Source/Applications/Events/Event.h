@@ -41,6 +41,7 @@ public:
 	virtual uint32 GetCategoryFlags() const = 0;
 	bool IsInCategory(EventCategory category) const { return GetCategoryFlags() & static_cast<uint32>(category); }
 	virtual std::string ToString() const { return GetName(); }
+	bool IsHandled() const { return m_handled; }
 
 protected:
 	bool m_handled = false;

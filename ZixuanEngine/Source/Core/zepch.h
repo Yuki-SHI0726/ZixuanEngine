@@ -2,6 +2,7 @@
 
 #include "Core.h"
 #include "Utils/Typedefs.h"
+#include "Utils/Colors/Color.h"
 #include "Utils/Log/Logger.h"
 
 #include <assert.h>

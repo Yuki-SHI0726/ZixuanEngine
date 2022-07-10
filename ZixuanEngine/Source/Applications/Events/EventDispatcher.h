@@ -12,19 +12,19 @@ class EventDispatcher
 public:
 	EventDispatcher(Event& inEvent);
 
-	template<typename Type>
-	bool Dispatch(EventFn<Type> func);
+	template<typename EventType>
+	bool Dispatch(EventFn<EventType> func);
 
 private:
 	Event& m_event;
 };
 
-template<typename Type>
-inline bool EventDispatcher::Dispatch(EventFn<Type> func)
+template<typename EventType>
+inline bool EventDispatcher::Dispatch(EventFn<EventType> func)
 {
-	if (m_event.GetEventType() == Type::GetStaticType())
+	if (m_event.GetEventType() == EventType::GetStaticType())
 	{
-		m_event.m_handled = func(*(Type*)&m_event);
+		m_event.m_handled = func(*reinterpret_cast<EventType*>(&m_event));
 		return true;
 	}
 	return false;

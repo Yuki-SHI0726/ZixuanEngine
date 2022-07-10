@@ -63,14 +63,17 @@ project "ZixuanEngine"
 
     filter "configurations:Debug"
         defines "ZE_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "ZE_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "ZE_DIST"
+        buildoptions "/MD"
         optimize "On"
 
 project "Sandbox"

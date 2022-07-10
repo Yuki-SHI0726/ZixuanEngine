@@ -4,11 +4,17 @@
 #include <string>
 #include <unordered_map>
 
-#define ZE_LOG(category, format, ...) { Logger::Get().LogInfo(#category, __LINE__, __FILE__, format, __VA_ARGS__); } 
+/**
+ * Zixuan Engine's global logging macro. Prints a message to the console
+ * @param category		The category to log the message. See Logger::m_category and constructor for more info
+ * @param format ...	The args to log
+ */
+#define ZE_LOG(category, format, ...)\
+	ZE::Logger::Get().LogInfo(#category, __LINE__, __FILE__, format, __VA_ARGS__); 
 
 namespace ZE
 {
-class Logger
+class ZE_API  Logger
 {
 public:
 	enum class Color : int
