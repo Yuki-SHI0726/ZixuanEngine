@@ -10,7 +10,7 @@ public:
 
 	virtual void OnUpdate() override final
 	{
-		ZE_LOG(Prompt, "ExampleLayer::Update");
+		//ZE_LOG(Prompt, "ExampleLayer::Update");
 	}
 
 	virtual void OnEvent(ZE::Event& e) override final

@@ -1,5 +1,6 @@
 workspace "ZixuanEngine"
     architecture "x64"
+    startproject "Sandbox"
 
     configurations
     {
@@ -60,11 +61,6 @@ project "ZixuanEngine"
             "ZE_BUILD_DLL",
             "GLFW_INCLUDE_NONE",
         }
-    
-        postbuildcommands
-        {
-            ("{COPY} %{cfg.buildtarget.relpath} ../Builds/" .. outputdir .. "/Sandbox")
-        }
 
     filter "configurations:Debug"
         defines "ZE_DEBUG"
@@ -114,6 +110,11 @@ project "Sandbox"
     defines
     {
         "ZE_PLATFORM_WINDOWS",
+    }
+
+    postbuildcommands
+    {
+        "xcopy \"$(SolutionDir)Builds\\" .. outputdir .. "\\ZixuanEngine\\*.dll\"" .. " \"$(OutDir)\"  /d /i /y"
     }
 
     filter "configurations:Debug"

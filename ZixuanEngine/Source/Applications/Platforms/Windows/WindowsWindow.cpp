@@ -64,6 +64,7 @@ void WindowsWindow::Init(const WindowProps& props)
 
 	ZE_LOG(Info, "Creating window {%s} (%d, %d)", props.m_title.c_str(), props.m_width, props.m_height);
 
+	// Preventing re-initializing glfw when we have done so already where we have other windows
 	if (!s_glfwInitialized)
 	{
 		const int32 initResult = glfwInit();

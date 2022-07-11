@@ -41,7 +41,7 @@ void Application::Shutdown()
 void Application::OnEvent(Event& e)
 {
 #if ZE_DEBUG
-	ZE_LOG(Info, e.ToString().c_str());
+	//ZE_LOG(Info, e.ToString().c_str());
 #endif
 
 	EventDispatcher dispatcher(e);

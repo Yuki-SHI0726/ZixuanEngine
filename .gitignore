@@ -34,3 +34,12 @@ Builds/
 *.exe
 *.out
 *.app
+
+# Executables
+bin
+bin-int
+
+# Whitelist
+!Toolset/*/
+!Toolset/
+!Toolset/*
