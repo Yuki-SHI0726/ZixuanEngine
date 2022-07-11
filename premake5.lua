@@ -12,8 +12,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "Toolset/GLFW/include"
+IncludeDir["Glad"] = "Toolset/Glad/include"
 
 include "Toolset/GLFW"
+include "Toolset/Glad"
 
 project "ZixuanEngine"
     location "ZixuanEngine"
@@ -37,11 +39,13 @@ project "ZixuanEngine"
         "ZixuanEngine/Source",
         "ZixuanEngine/Source/Core",
         "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}",
     }
 
     links
     {
         "GLFW",
+        "Glad",
         "opengl32.lib",
     }
 
@@ -53,7 +57,8 @@ project "ZixuanEngine"
         defines
         {
             "ZE_PLATFORM_WINDOWS",
-            "ZE_BUILD_DLL"
+            "ZE_BUILD_DLL",
+            "GLFW_INCLUDE_NONE",
         }
     
         postbuildcommands

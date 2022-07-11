@@ -1,8 +1,11 @@
 #include "zepch.h"
+
 #include "WindowsWindow.h"
 #include "Applications/Events/ApplicationEvent.h"
 #include "Applications/Events/KeyEvent.h"
 #include "Applications/Events/MouseEvent.h"
+
+#include <glad/glad.h>
 
 namespace ZE
 {
@@ -71,6 +74,10 @@ void WindowsWindow::Init(const WindowProps& props)
 
 	m_pWindow = glfwCreateWindow(static_cast<int32>(props.m_width), static_cast<int32>(props.m_height), m_data.m_title.c_str(), nullptr, nullptr);
 	glfwMakeContextCurrent(m_pWindow);
+	
+	const int32 status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+	ZE_ASSERT(status == GLFW_TRUE, "Failed initializing Glad");
+
 	glfwSetWindowUserPointer(m_pWindow, &m_data);
 	SetVSync(true);
 	SetEventCallbacks();

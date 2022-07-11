@@ -8,16 +8,16 @@ public:
 	{ 
 	}
 
-	void OnUpdate() override final
+	virtual void OnUpdate() override final
 	{
 		ZE_LOG(Prompt, "ExampleLayer::Update");
 	}
 
-	void OnEvent(ZE::Event& e) override final
+	virtual void OnEvent(ZE::Event& e) override final
 	{
-		if (!e.IsInCategory(ZE::EventCategory::Mouse) && !e.IsInCategory(ZE::EventCategory::Application))
+		if (!e.IsInCategory(ZE::EventCategory::Mouse) && 
+			!e.IsInCategory(ZE::EventCategory::Application))
 		{
-			ZE_LOG(Prompt, e.ToString().c_str());
 		}
 	}
 };
