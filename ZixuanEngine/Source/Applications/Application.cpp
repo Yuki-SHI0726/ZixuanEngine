@@ -9,8 +9,13 @@
 
 namespace ZE
 {
+	Application* Application::s_instance = nullptr;
+
 bool Application::Init()
 {
+	ZE_ASSERT(!s_instance, "Application already exists");
+	s_instance = this;
+
 	m_pWindow = Window::Create();
 	m_pWindow->SetEventCallback(BIND_EVENT_FUNCTION(Application::OnEvent));
 
@@ -41,7 +46,7 @@ void Application::Shutdown()
 void Application::OnEvent(Event& e)
 {
 #if ZE_DEBUG
-	//ZE_LOG(Info, e.ToString().c_str());
+	ZE_LOG(Info, e.ToString().c_str());
 #endif
 
 	EventDispatcher dispatcher(e);
@@ -55,6 +60,18 @@ void Application::OnEvent(Event& e)
 			break;
 		}
 	}
+}
+
+void Application::PushLayer(Layer* pLayer)
+{
+	m_layerStack.PushLayer(pLayer);
+	pLayer->OnAttach();
+}
+
+void Application::PushOverlay(Layer* pOverlay)
+{
+	m_layerStack.PushOverlay(pOverlay);
+	pOverlay->OnAttach();
 }
 
 bool Application::OnWindowClose(WindowCloseEvent& windowCloseEvent)

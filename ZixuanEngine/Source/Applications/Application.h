@@ -12,19 +12,26 @@ class ZE_API Application
 public:
 	virtual ~Application() = default;
 
-	bool Init();
-	void Run();
-	void Shutdown();
+	virtual bool Init();
+	virtual void Run();
+	virtual void Shutdown();
 
-	void OnEvent(Event& e);
+	virtual void OnEvent(Event& e);
 
-	void PushLayer(Layer* pLayer) { m_layerStack.PushLayer(pLayer); }
-	void PushOverlay(Layer* pOverlay) { m_layerStack.PushOverlay(pOverlay); }
+	void PushLayer(Layer* pLayer);
+	void PushOverlay(Layer* pOverlay);
+
+	const Window* GetWindow() const { return m_pWindow; }
+	Window* GetWindow() { return m_pWindow; }
+
+	static Application* Get() { return s_instance; }
 
 private:
 	bool OnWindowClose(WindowCloseEvent& windowCloseEvent);
 
 private:
+	static Application* s_instance;
+
 	LayerStack m_layerStack;
 	Window* m_pWindow = nullptr;
 	bool m_isRunning = true;

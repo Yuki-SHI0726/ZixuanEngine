@@ -14,9 +14,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "Toolset/GLFW/include"
 IncludeDir["Glad"] = "Toolset/Glad/include"
+IncludeDir["ImGui"] = "Toolset/imgui"
+IncludeDir["ImGuiBackends"] = "Toolset/imgui/backends"
 
 include "Toolset/GLFW"
 include "Toolset/Glad"
+include "Toolset/imgui"
 
 project "ZixuanEngine"
     location "ZixuanEngine"
@@ -41,12 +44,15 @@ project "ZixuanEngine"
         "ZixuanEngine/Source/Core",
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
+        "%{IncludeDir.ImGui}",
+        "%{IncludeDir.ImGuiBackends}",
     }
 
     links
     {
         "GLFW",
         "Glad",
+        "ImGui",
         "opengl32.lib",
     }
 
@@ -60,6 +66,7 @@ project "ZixuanEngine"
             "ZE_PLATFORM_WINDOWS",
             "ZE_BUILD_DLL",
             "GLFW_INCLUDE_NONE",
+            "IMGUI_IMPL_OPENGL_LOADER_CUSTOM",
         }
 
     filter "configurations:Debug"

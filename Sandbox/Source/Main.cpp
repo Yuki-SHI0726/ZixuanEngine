@@ -1,4 +1,5 @@
 #include "Applications/Application.h"
+#include "Applications/Layers/ImGuiLayer.h"
 
 class ExampleLayer : public ZE::Layer
 {
@@ -25,9 +26,14 @@ public:
 class Sandbox : public ZE::Application
 {
 public:
-	Sandbox()
+	virtual bool Init() override final
 	{
-		PushLayer(new ExampleLayer());
+		ZE::Application::Init();
+
+		ZE::Application::PushLayer(new ExampleLayer());
+		ZE::Application::PushOverlay(new ZE::ImGuiLayer());
+
+		return true;
 	}
 };
 

@@ -29,6 +29,8 @@ public:
 	void SetVSync(bool enabled) override final;
 	bool IsVSync() const override final;
 
+	virtual void* GetWindowImplPtr() override final { return m_pWindow; }
+
 private:
 	virtual void Init(const WindowProps& props);
 	virtual void Shutdown();

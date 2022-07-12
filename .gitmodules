@@ -1,3 +1,6 @@
 [submodule "Toolset/glfw"]
 	path = Toolset/glfw
 	url = https://github.com/TheCherno/glfw.git
+[submodule "Toolset/imgui"]
+	path = Toolset/imgui
+	url = https://github.com/TheCherno/imgui.git
