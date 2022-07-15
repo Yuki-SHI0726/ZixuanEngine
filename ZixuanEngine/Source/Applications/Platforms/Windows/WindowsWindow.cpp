@@ -97,7 +97,7 @@ void WindowsWindow::SetEventCallbacks()
 			pData->m_width = width;
 			pData->m_height = height;
 
-			WindowResizeEvent windowResizeEvent(width, height);
+			WindowResizedEvent windowResizeEvent(width, height);
 			pData->m_eventCallback(windowResizeEvent);
 		});
 
@@ -107,6 +107,15 @@ void WindowsWindow::SetEventCallbacks()
 
 			WindowCloseEvent windowCloseEvent;
 			pData->m_eventCallback(windowCloseEvent);
+		});
+
+	glfwSetCharCallback(m_pWindow, [](GLFWwindow* pWindow, uint32 codePoint)
+		{
+			WindowData* pData = static_cast<WindowData*>(glfwGetWindowUserPointer(pWindow));
+
+			KeyTypedEvent keyTypedEvent(codePoint);
+			pData->m_eventCallback(keyTypedEvent);
+
 		});
 
 	glfwSetKeyCallback(m_pWindow, [](GLFWwindow* pWindow, int32 key, int32 scancode, int32 action, int32 mods)

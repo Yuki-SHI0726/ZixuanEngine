@@ -30,8 +30,8 @@ public:
 	{
 		ZE::Application::Init();
 
-		ZE::Application::PushLayer(new ExampleLayer());
-		ZE::Application::PushOverlay(new ZE::ImGuiLayer());
+		PushLayer(new ExampleLayer());
+		PushOverlay(new ZE::ImGuiLayer());
 
 		return true;
 	}

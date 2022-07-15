@@ -5,10 +5,10 @@
 namespace ZE
 {
 /** Event when a window got resized */
-class ZE_API WindowResizeEvent : public Event
+class ZE_API WindowResizedEvent : public Event
 {
 public: 
-	WindowResizeEvent(uint32 width, uint32 height);
+	WindowResizedEvent(uint32 width, uint32 height);
 
 	EVENT_CLASS_TYPE(WindowResize)
 	EVENT_CLASS_CATEGORY(static_cast<uint32>(EventCategory::Application))

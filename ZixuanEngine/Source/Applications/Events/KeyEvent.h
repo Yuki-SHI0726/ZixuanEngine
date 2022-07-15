@@ -42,4 +42,15 @@ public:
 
 	virtual std::string ToString() const override final;
 };
+
+/** Event for keyboard key typed */
+class ZE_API KeyTypedEvent : public KeyEvent
+{
+public:
+	KeyTypedEvent(KeyCode keyCode);
+
+	EVENT_CLASS_TYPE(KeyTyped);
+
+	virtual std::string ToString() const override final;
+};
 }

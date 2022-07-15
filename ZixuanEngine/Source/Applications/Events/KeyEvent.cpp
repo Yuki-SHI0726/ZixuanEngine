@@ -34,4 +34,17 @@ std::string KeyReleasedEvent::ToString() const
 	return ss.str();
 }
 
+KeyTypedEvent::KeyTypedEvent(KeyCode keyCode)
+	: KeyEvent(keyCode)
+{
+}
+
+std::string KeyTypedEvent::ToString() const
+{
+	std::stringstream ss;
+	ss << "KeyTyped: " << m_keyCode;
+	return ss.str();
+}
+
+
 }
