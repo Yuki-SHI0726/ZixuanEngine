@@ -1,6 +1,7 @@
 #include "zepch.h"
 
 #include "Application.h"
+#include "Input/Input.h"
 #include "Events/EventDispatcher.h"
 #include "Events/KeyEvent.h"
 #include "Utils/Log/Logger.h"
@@ -34,6 +35,7 @@ void Application::Run()
 			pLayer->OnUpdate();
 		}
 
+		Logger::Get().PrintLine(Input::GetMousePos());
 		m_pWindow->OnUpdate();
 	}
 }
@@ -41,6 +43,7 @@ void Application::Run()
 void Application::Shutdown()
 {
 	ZE_SAFE_DELETE(m_pWindow);
+	Input::Shutdown();
 }
 
 void Application::OnEvent(Event& e)

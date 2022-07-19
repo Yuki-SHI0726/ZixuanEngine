@@ -2,6 +2,8 @@
 
 #include "Core.h"
 #include "Utils/Typedefs.h"
+#include "Utils/Math/Vector2.h"
+#include "Utils/Math/Vector3.h"
 #include "Utils/Colors/Color.h"
 #include "Utils/Log/Logger.h"
 

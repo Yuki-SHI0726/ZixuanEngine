@@ -25,11 +25,11 @@ public:
 	virtual uint32 GetWidth() const override final { return m_data.m_width; }
 	virtual uint32 GetHeight() const override final { return m_data.m_height; }
 
-	void SetEventCallback(const EventCallbackFn& callback) override final { m_data.m_eventCallback = callback; }
-	void SetVSync(bool enabled) override final;
-	bool IsVSync() const override final;
+	virtual void SetEventCallback(const EventCallbackFn& callback) override final { m_data.m_eventCallback = callback; }
+	virtual void SetVSync(bool enabled) override final;
+	virtual bool IsVSync() const override final;
 
-	virtual void* GetWindowImplPtr() override final { return m_pWindow; }
+	virtual void* GetWindowImplPtr() const override final { return m_pWindow; }
 
 private:
 	virtual void Init(const WindowProps& props);

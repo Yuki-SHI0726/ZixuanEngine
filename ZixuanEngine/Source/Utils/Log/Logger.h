@@ -53,6 +53,7 @@ public:
 	void LogInfo(const std::string& category, int line, const char* file, const char* format, ...);
 	template<typename Type>	void PrintInColor(Color color, const Type& message);
 	template<typename Type>	void Print(const Type& message);
+	template<typename Type>	void PrintLine(const Type& message);
 
 private:
 	Logger();
@@ -73,6 +74,12 @@ template<typename Type>
 inline void Logger::Print(const Type& message)
 {
 	std::cout << message;
+}
+
+template<typename Type>
+inline void Logger::PrintLine(const Type& message)
+{
+	std::cout << message << '\n';
 }
 
 }

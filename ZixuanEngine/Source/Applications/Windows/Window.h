@@ -40,6 +40,6 @@ public:
 
 	static Window* Create(const WindowProps& props = WindowProps());
 
-	virtual void* GetWindowImplPtr() = 0;
+	virtual void* GetWindowImplPtr() const = 0;
 };
 }
